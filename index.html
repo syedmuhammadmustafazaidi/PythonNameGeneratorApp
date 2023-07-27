@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Name Generator</title>
+    
+</head>
+<body>
+    <h1>Random Name Generator</h1>
+    <form action="/" method="post">
+        <label for="num_names">Number of Names:</label>
+        <input type="number" name="num_names" id="num_names" min="1" max="10" required>
+        <button type="submit">Generate Names</button>
+    </form>
+    {% if names %}
+    <h2>Generated Names:</h2>
+    <ul>
+        {% for name in names %}
+        <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+<script src="app.py"></script>
+</html>
